@@ -25,7 +25,9 @@ struct AppetizerListItem: View {
                     .foregroundStyle(.secondary)
             }
         }
+        .contentShape(Rectangle())
     }
+    
 }
 
 #Preview {

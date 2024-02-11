@@ -23,6 +23,7 @@
 		20CBB3C72B77F8FC00F55772 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CBB3C62B77F8FC00F55772 /* Alert.swift */; };
 		20CBB3C92B78024C00F55772 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CBB3C82B78024C00F55772 /* LoadingView.swift */; };
 		20CBB3CD2B7875B900F55772 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CBB3CC2B7875B900F55772 /* RemoteImage.swift */; };
+		20CBB3DB2B787D3100F55772 /* AppetizerDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CBB3DA2B787D3100F55772 /* AppetizerDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		20CBB3C62B77F8FC00F55772 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		20CBB3C82B78024C00F55772 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		20CBB3CC2B7875B900F55772 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
+		20CBB3DA2B787D3100F55772 /* AppetizerDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				20CBB3C42B77F35200F55772 /* AppetizerListViewModel.swift */,
 				2068A8212B73286D00D37258 /* AppetizerListView.swift */,
 				20CBB3BE2B77E38300F55772 /* AppetizerListItem.swift */,
+				20CBB3DA2B787D3100F55772 /* AppetizerDetailsView.swift */,
 			);
 			path = AppetizerListView;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				2068A8162B7327E300D37258 /* AppetizerTabView.swift in Sources */,
 				20CBB3C72B77F8FC00F55772 /* Alert.swift in Sources */,
 				20CBB3C32B77EBDE00F55772 /* APError.swift in Sources */,
+				20CBB3DB2B787D3100F55772 /* AppetizerDetailsView.swift in Sources */,
 				2068A8142B7327E300D37258 /* AppetizersApp.swift in Sources */,
 				20CBB3CD2B7875B900F55772 /* RemoteImage.swift in Sources */,
 				20CBB3BD2B77355400F55772 /* Appetizer.swift in Sources */,
@@ -431,9 +435,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = daanmoura.dev.Appetizers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
 			};
 			name = Debug;
 		};
@@ -460,9 +468,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = daanmoura.dev.Appetizers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
 			};
 			name = Release;
 		};
