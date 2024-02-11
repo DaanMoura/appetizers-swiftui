@@ -11,16 +11,14 @@ struct AppetizerListView: View {
     
     @StateObject var randomAppetizerEmoji = RandomAppetizerEmoji()
     @StateObject var viewModel = AppetizerListViewModel()
-    @State private var isShowingDetail = false
-    @State private var selectedAppetizer: Appetizer?
     
     var body: some View {
         ZStack {
             NavigationStack {
                 List(viewModel.appetizers) { appetizer in
                     Button {
-                        isShowingDetail = true
-                        selectedAppetizer = appetizer
+                        viewModel.isShowingDetail = true
+                        viewModel.selectedAppetizer = appetizer
                     } label: {
                         AppetizerListItem(appetizer: appetizer)
                     }
@@ -28,16 +26,14 @@ struct AppetizerListView: View {
                 .listStyle(.plain)
                 .navigationTitle("\(randomAppetizerEmoji.emoji) Appetizers")
             }
-            .disabled(isShowingDetail)
-            .blur(radius: isShowingDetail ? 20 : 0)    
+            .disabled(viewModel.isShowingDetail)
+            .blur(radius: viewModel.isShowingDetail ? 20 : 0)
             .ignoresSafeArea()
-            .animation(.spring, value: isShowingDetail)
+            .animation(.spring, value: viewModel.isShowingDetail)
             
-            if isShowingDetail {
-                AppetizerDetailsView(appetizer: selectedAppetizer!, 
-                                     isShowingDetail: $isShowingDetail)
-                .transition(.move(edge: .bottom))
-                .animation(.easeInOut, value: isShowingDetail)
+            if viewModel.isShowingDetail {
+                AppetizerDetailsView(appetizer: viewModel.selectedAppetizer!,
+                                     isShowingDetail: $viewModel.isShowingDetail)
             }
             
             if viewModel.isLoading {

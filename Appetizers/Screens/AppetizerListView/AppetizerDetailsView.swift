@@ -37,15 +37,9 @@ struct AppetizerDetailsView: View {
             
             Spacer()
             
-            Button {
-               print("tapped")
-            } label: {
-                Text("$\(appetizer.price.formatted(.currency(code: ""))) - Add to order")
-                    .fontWeight(.bold)
-                    .frame(width: 244, height: 32)
+            APButton(text: "$\(appetizer.price.formatted(.currency(code: ""))) - Add to order") {
+                isShowingDetail = false
             }
-            .buttonStyle(.borderedProminent)
-            .tint(.brandPrimary.opacity(0.8))
             .padding()
             
         }
@@ -53,21 +47,7 @@ struct AppetizerDetailsView: View {
         .background(Color(.systemBackground))
         .clipShape(RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
         .shadow(color: .primary.opacity(0.3),radius: 40)
-        .overlay(Button {
-            isShowingDetail = false
-        } label: {
-            ZStack {
-                Circle()
-                    .frame(width: 32, height: 32)
-                    .foregroundStyle(Color(.systemBackground))
-                    .opacity(0.6)
-                
-                Image(systemName: "xmark")
-                    .imageScale(.small)
-                    .foregroundStyle(.foreground)
-                    .frame(width: 44, height: 44)
-            }
-        }, alignment: .topTrailing)
+        .overlay(XDismissButton { isShowingDetail = false }, alignment: .topTrailing)
     }
 }
 

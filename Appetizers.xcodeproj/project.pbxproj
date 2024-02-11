@@ -15,6 +15,8 @@
 		2068A8242B73288000D37258 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2068A8232B73288000D37258 /* AccountView.swift */; };
 		2068A8262B73289100D37258 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2068A8252B73289100D37258 /* OrderView.swift */; };
 		2068A8282B732C5400D37258 /* RandomAppetizerEmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2068A8272B732C5400D37258 /* RandomAppetizerEmoji.swift */; };
+		20B37DE12B79404A001BCA94 /* APButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B37DE02B79404A001BCA94 /* APButton.swift */; };
+		20B37DE32B7942CA001BCA94 /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B37DE22B7942CA001BCA94 /* XDismissButton.swift */; };
 		20CBB3BD2B77355400F55772 /* Appetizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CBB3BC2B77355400F55772 /* Appetizer.swift */; };
 		20CBB3BF2B77E38300F55772 /* AppetizerListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CBB3BE2B77E38300F55772 /* AppetizerListItem.swift */; };
 		20CBB3C12B77E98200F55772 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CBB3C02B77E98200F55772 /* NetworkManager.swift */; };
@@ -36,6 +38,8 @@
 		2068A8232B73288000D37258 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		2068A8252B73289100D37258 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 		2068A8272B732C5400D37258 /* RandomAppetizerEmoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAppetizerEmoji.swift; sourceTree = "<group>"; };
+		20B37DE02B79404A001BCA94 /* APButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APButton.swift; sourceTree = "<group>"; };
+		20B37DE22B7942CA001BCA94 /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
 		20CBB3BC2B77355400F55772 /* Appetizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appetizer.swift; sourceTree = "<group>"; };
 		20CBB3BE2B77E38300F55772 /* AppetizerListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerListItem.swift; sourceTree = "<group>"; };
 		20CBB3C02B77E98200F55772 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -94,6 +98,15 @@
 				2068A81A2B7327E400D37258 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		20B37DDF2B794038001BCA94 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				20B37DE02B79404A001BCA94 /* APButton.swift */,
+				20B37DE22B7942CA001BCA94 /* XDismissButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		20CBB3CE2B787A4D00F55772 /* Screens */ = {
@@ -172,6 +185,7 @@
 		20CBB3D62B787B8300F55772 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				20B37DDF2B794038001BCA94 /* Buttons */,
 				20CBB3D92B787C3400F55772 /* Image */,
 				20CBB3D72B787B9300F55772 /* UIKit */,
 			);
@@ -274,10 +288,12 @@
 			files = (
 				20CBB3C12B77E98200F55772 /* NetworkManager.swift in Sources */,
 				2068A8242B73288000D37258 /* AccountView.swift in Sources */,
+				20B37DE32B7942CA001BCA94 /* XDismissButton.swift in Sources */,
 				20CBB3C52B77F35200F55772 /* AppetizerListViewModel.swift in Sources */,
 				20CBB3BF2B77E38300F55772 /* AppetizerListItem.swift in Sources */,
 				2068A8282B732C5400D37258 /* RandomAppetizerEmoji.swift in Sources */,
 				2068A8162B7327E300D37258 /* AppetizerTabView.swift in Sources */,
+				20B37DE12B79404A001BCA94 /* APButton.swift in Sources */,
 				20CBB3C72B77F8FC00F55772 /* Alert.swift in Sources */,
 				20CBB3C32B77EBDE00F55772 /* APError.swift in Sources */,
 				20CBB3DB2B787D3100F55772 /* AppetizerDetailsView.swift in Sources */,
