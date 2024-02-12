@@ -19,6 +19,7 @@
 		20B37DE32B7942CA001BCA94 /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B37DE22B7942CA001BCA94 /* XDismissButton.swift */; };
 		20B37DE52B79520D001BCA94 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B37DE42B79520D001BCA94 /* AccountViewModel.swift */; };
 		20B37DE82B7955C5001BCA94 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B37DE72B7955C5001BCA94 /* String+Ext.swift */; };
+		20B37DEA2B7960C9001BCA94 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B37DE92B7960C9001BCA94 /* User.swift */; };
 		20CBB3BD2B77355400F55772 /* Appetizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CBB3BC2B77355400F55772 /* Appetizer.swift */; };
 		20CBB3BF2B77E38300F55772 /* AppetizerListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CBB3BE2B77E38300F55772 /* AppetizerListItem.swift */; };
 		20CBB3C12B77E98200F55772 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CBB3C02B77E98200F55772 /* NetworkManager.swift */; };
@@ -44,6 +45,7 @@
 		20B37DE22B7942CA001BCA94 /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
 		20B37DE42B79520D001BCA94 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		20B37DE72B7955C5001BCA94 /* String+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Ext.swift"; path = "../../../../../../Downloads/String+Ext.swift"; sourceTree = "<group>"; };
+		20B37DE92B7960C9001BCA94 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		20CBB3BC2B77355400F55772 /* Appetizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appetizer.swift; sourceTree = "<group>"; };
 		20CBB3BE2B77E38300F55772 /* AppetizerListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerListItem.swift; sourceTree = "<group>"; };
 		20CBB3C02B77E98200F55772 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -165,7 +167,7 @@
 			children = (
 				20B37DE62B7955A4001BCA94 /* Extensions */,
 				20CBB3D82B787C1E00F55772 /* ObservableObjects */,
-				20CBB3D42B787B0E00F55772 /* ErrorHandling */,
+				20CBB3D42B787B0E00F55772 /* Alerts */,
 				20CBB3D32B787AE000F55772 /* Managers */,
 			);
 			path = Utilities;
@@ -179,19 +181,20 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		20CBB3D42B787B0E00F55772 /* ErrorHandling */ = {
+		20CBB3D42B787B0E00F55772 /* Alerts */ = {
 			isa = PBXGroup;
 			children = (
 				20CBB3C62B77F8FC00F55772 /* Alert.swift */,
 				20CBB3C22B77EBDE00F55772 /* APError.swift */,
 			);
-			path = ErrorHandling;
+			path = Alerts;
 			sourceTree = "<group>";
 		};
 		20CBB3D52B787B5100F55772 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				20CBB3BC2B77355400F55772 /* Appetizer.swift */,
+				20B37DE92B7960C9001BCA94 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				20CBB3BF2B77E38300F55772 /* AppetizerListItem.swift in Sources */,
 				2068A8282B732C5400D37258 /* RandomAppetizerEmoji.swift in Sources */,
 				2068A8162B7327E300D37258 /* AppetizerTabView.swift in Sources */,
+				20B37DEA2B7960C9001BCA94 /* User.swift in Sources */,
 				20B37DE12B79404A001BCA94 /* APButton.swift in Sources */,
 				20CBB3C72B77F8FC00F55772 /* Alert.swift in Sources */,
 				20CBB3C32B77EBDE00F55772 /* APError.swift in Sources */,

@@ -15,13 +15,13 @@ struct AccountView: View {
         NavigationStack {
             Form {
                 Section(header: Text("Personal info")) {
-                    TextField("First name", text: $viewModel.firstName)
-                    TextField("Last name", text: $viewModel.lastName)
-                    TextField("Email", text: $viewModel.email)
+                    TextField("First name", text: $viewModel.user.firstName)
+                    TextField("Last name", text: $viewModel.user.lastName)
+                    TextField("Email", text: $viewModel.user.email)
                         .keyboardType(.emailAddress)
                         .textInputAutocapitalization(.never)
                         .autocorrectionDisabled()
-                    DatePicker("Birthday", selection: $viewModel.birthday, displayedComponents: .date)
+                    DatePicker("Birthday", selection: $viewModel.user.birthdate, displayedComponents: .date)
                     Button {
                         viewModel.onSaveChanges()
                     } label: {
@@ -30,10 +30,16 @@ struct AccountView: View {
                 }
                 
                 Section(header: Text("Requests")) {
-                    Toggle("Extra Napkins", isOn: $viewModel.extraNapkins)
+                    Toggle("Extra napkins", isOn: $viewModel.user.extraNapkins)
                         .tint(.brandPrimary)
-                    Toggle("Frequent Refills", isOn: $viewModel.frequentRefills)
+                        .onChange(of: viewModel.user.extraNapkins) {
+                            viewModel.saveUserRequests()
+                        }
+                    Toggle("Frequent refills", isOn: $viewModel.user.frequentRefills)
                         .tint(.brandPrimary)
+                        .onChange(of: viewModel.user.frequentRefills) {
+                            viewModel.saveUserRequests()
+                        }
                 }
             }
             .navigationTitle("👤 Account")
