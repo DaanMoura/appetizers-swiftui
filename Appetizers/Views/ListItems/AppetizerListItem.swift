@@ -19,7 +19,7 @@ struct AppetizerListItem: View {
                 Text(appetizer.name)
                     .font(.title2)
                     .fontWeight(.medium)
-                Text("$\(appetizer.price.formatted(.currency(code: "")))")
+                Text(appetizer.price.asMoney)
                     .font(.subheadline)
                     .fontWeight(.semibold)
                     .foregroundStyle(.secondary)

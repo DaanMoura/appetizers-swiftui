@@ -5,7 +5,11 @@
 //  Created by Daniel Moura on 10/02/24.
 //
 
+#if canImport(UIKit)
 import UIKit
+#else
+import AppKit
+#endif
 
 final class NetworkManager {
     static let shared = NetworkManager()
