@@ -65,9 +65,11 @@ struct AccountView: View {
             }
             .navigationTitle("👤 Account")
             .toolbar {
+                #if os(iOS)
                 ToolbarItemGroup(placement: .keyboard) {
                     Button("Dismiss") { focusedTextField = nil }
                 }
+                #endif
             }
         }
         .alert(item: $viewModel.alertItem) { alertItem in

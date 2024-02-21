@@ -12,9 +12,17 @@ struct AppetizerListItem: View {
     
     var body: some View {
         HStack(spacing: 20) {
-            AppetizerRemoteImage(url: appetizer.imageURL)
-                .frame(width: 120, height: 90)
-                .clipShape(RoundedRectangle(cornerSize: CGSize(width: 12, height: 12)))
+            AsyncImage(url: URL(string: appetizer.imageURL)) { image in
+                image
+                    .resizable()
+                    .frame(width: 120, height: 90)
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
+            } placeholder: {
+                Image("food-placeholder")
+                    .resizable()
+                    .frame(width: 120, height: 90)
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
+            }
             VStack(alignment: .leading, spacing: 8) {
                 Text(appetizer.name)
                     .font(.title2)

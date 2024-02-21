@@ -26,6 +26,9 @@ struct AppetizerListView: View {
                 .listStyle(.plain)
                 .navigationTitle("\(randomAppetizerEmoji.emoji) Appetizers")
             }
+            .task {
+                await viewModel.getAppetizers()
+            }
             .disabled(viewModel.isShowingDetail)
             .blur(radius: viewModel.isShowingDetail ? 20 : 0)
             .ignoresSafeArea()
